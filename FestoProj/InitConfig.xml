@@ -1,0 +1,29 @@
+<Computer>
+	<DataType value="FestoProj.Computer"/>	
+	<Properties>
+		<Property name="memory" dataType="FestoProj.Hardware.RAM">
+			<Properties>
+				<Property name="manufacturerCompanyName" value="Kingston"/>
+				<Property name="cost" value="50"/>
+				<Property name="size" value="8"/>
+				<Property name="memoryType" value="DDR3"/>
+			</Properties>
+		</Property>
+		<Property name="processor" dataType="FestoProj.Hardware.Processor">
+			<Properties>
+				<Property name="manufacturerCompanyName" value="Intel"/>
+				<Property name="cost" value="200"/>
+				<Property name="coresNumber" value="6"/>
+				<Property name="socketName" value="1155"/>
+			</Properties>
+		</Property>
+		<Property name="motherBord" dataType="FestoProj.Hardware.MotherBord">
+			<Properties>
+				<Property name="manufacturerCompanyName" value="Asus"/>
+				<Property name="cost" value="90"/>
+				<Property name="formFactor" value="MicroATX"/>
+				<Property name="socketName" value="1155"/>
+			</Properties>
+		</Property>
+	</Properties>
+</Computer>

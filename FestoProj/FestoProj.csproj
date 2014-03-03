@@ -32,6 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,14 +50,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Computer.cs" />
+    <Compile Include="ComputerConfigurationExtractor.cs" />
+    <Compile Include="ComputerComputerFactory.cs" />
+    <Compile Include="Container.cs" />
+    <Compile Include="Hardware\Device.cs" />
+    <Compile Include="Hardware\FormFactor.cs" />
+    <Compile Include="Hardware\MemoryType.cs" />
+    <Compile Include="Hardware\MotherBoard.cs" />
+    <Compile Include="Hardware\Processor.cs" />
+    <Compile Include="Hardware\RAM.cs" />
+    <Compile Include="Helpers\XElementExtensions.cs" />
+    <Compile Include="IComputerConfigurationExtractor.cs" />
+    <Compile Include="IComputerFactory.cs" />
+    <Compile Include="IInitializationStrategy.cs" />
+    <Compile Include="MotherBoardInitializationInitializationStrategy.cs" />
+    <Compile Include="ProcessorInitializationInitializationStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SampleObjects\Bread.cs" />
-    <Compile Include="SampleObjects\Cheese.cs" />
-    <Compile Include="SampleObjects\Meat.cs" />
+    <Compile Include="RamIinitializationInitializationStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="InitConfig.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
