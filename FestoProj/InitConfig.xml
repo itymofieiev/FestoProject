@@ -17,7 +17,7 @@
 				<Property name="socketName" value="1155"/>
 			</Properties>
 		</Property>
-		<Property name="motherBord" dataType="FestoProj.Hardware.MotherBord">
+		<Property name="motherBoard" dataType="FestoProj.Hardware.MotherBoard">
 			<Properties>
 				<Property name="manufacturerCompanyName" value="Asus"/>
 				<Property name="cost" value="90"/>

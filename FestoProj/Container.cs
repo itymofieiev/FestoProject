@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Castle.MicroKernel.Registration;
 using Castle.Windsor;
 using FestoProj.Hardware;
 
@@ -17,6 +18,7 @@ namespace FestoProj {
                                                             Instance = Activator.CreateInstance(type) as IInitializationStrategy<Device>
                                                         })
                                                     .ToDictionary(k => k.ArgumentType, v => v.Instance);
+            Register(Component.For<IComputerFactory>().ImplementedBy<ComputerComputerFactory>().DependsOn(new { initializationStrategies }));
         }
     }
 }

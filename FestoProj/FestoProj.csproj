@@ -54,6 +54,7 @@
     <Compile Include="ComputerConfigurationExtractor.cs" />
     <Compile Include="ComputerComputerFactory.cs" />
     <Compile Include="Container.cs" />
+    <Compile Include="EquipmentNotFoundException.cs" />
     <Compile Include="Hardware\Device.cs" />
     <Compile Include="Hardware\FormFactor.cs" />
     <Compile Include="Hardware\MemoryType.cs" />
@@ -64,11 +65,11 @@
     <Compile Include="IComputerConfigurationExtractor.cs" />
     <Compile Include="IComputerFactory.cs" />
     <Compile Include="IInitializationStrategy.cs" />
-    <Compile Include="MotherBoardInitializationInitializationStrategy.cs" />
-    <Compile Include="ProcessorInitializationInitializationStrategy.cs" />
+    <Compile Include="MotherBoardInitializationStrategy.cs" />
+    <Compile Include="ProcessorInitializationStrategy.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RamIinitializationInitializationStrategy.cs" />
+    <Compile Include="RamInitializationStrategy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
