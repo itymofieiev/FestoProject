@@ -52,8 +52,9 @@
   <ItemGroup>
     <Compile Include="Computer.cs" />
     <Compile Include="ComputerConfigurationExtractor.cs" />
-    <Compile Include="ComputerComputerFactory.cs" />
+    <Compile Include="ComputerFactory.cs" />
     <Compile Include="Container.cs" />
+    <Compile Include="DeviceTesting.cs" />
     <Compile Include="EquipmentNotFoundException.cs" />
     <Compile Include="Hardware\Device.cs" />
     <Compile Include="Hardware\FormFactor.cs" />
@@ -61,9 +62,12 @@
     <Compile Include="Hardware\MotherBoard.cs" />
     <Compile Include="Hardware\Processor.cs" />
     <Compile Include="Hardware\RAM.cs" />
+    <Compile Include="Helpers\DeviceTypeDto.cs" />
+    <Compile Include="Helpers\StringExtensions.cs" />
     <Compile Include="Helpers\XElementExtensions.cs" />
     <Compile Include="IComputerConfigurationExtractor.cs" />
     <Compile Include="IComputerFactory.cs" />
+    <Compile Include="IDeviceTesting.cs" />
     <Compile Include="IInitializationStrategy.cs" />
     <Compile Include="MotherBoardInitializationStrategy.cs" />
     <Compile Include="ProcessorInitializationStrategy.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="TestingConfig.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="InitConfig.xml">

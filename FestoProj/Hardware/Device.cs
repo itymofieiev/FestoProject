@@ -1,11 +1,15 @@
 ﻿using System;
 
 namespace FestoProj.Hardware {
-    public abstract class Device {
-        protected Device(string manufacturerCompanyName, int cost) {
+    public class Device {
+        public Device(string manufacturerCompanyName, int cost, string name) {
             if (manufacturerCompanyName == null) {
                 throw new ArgumentNullException("manufacturerCompanyName");
             }
+            if (name == null) {
+                throw new ArgumentNullException("name");
+            }
+            Name = name;
             ManufacturerCompanyName = manufacturerCompanyName;
             Cost = cost;
         }
@@ -14,8 +18,10 @@ namespace FestoProj.Hardware {
 
         public int Cost { get; private set; }
 
+        public string Name { get; private set; }
+
         protected bool Equals(Device other) {
-            return string.Equals(ManufacturerCompanyName, other.ManufacturerCompanyName) && Cost == other.Cost;
+            return string.Equals(ManufacturerCompanyName, other.ManufacturerCompanyName) && Cost == other.Cost && string.Equals(Name, other.Name);
         }
 
         public override bool Equals(object obj) {
@@ -30,7 +36,10 @@ namespace FestoProj.Hardware {
 
         public override int GetHashCode() {
             unchecked {
-                return (ManufacturerCompanyName.GetHashCode() * 397) ^ Cost;
+                var hashCode = ManufacturerCompanyName != null ? ManufacturerCompanyName.GetHashCode() : 0;
+                hashCode = (hashCode * 397) ^ Cost;
+                hashCode = (hashCode * 397) ^ (Name != null ? Name.GetHashCode() : 0);
+                return hashCode;
             }
         }
     }

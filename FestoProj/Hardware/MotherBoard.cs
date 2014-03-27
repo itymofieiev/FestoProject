@@ -2,7 +2,9 @@
 
 namespace FestoProj.Hardware {
     public class MotherBoard : Device {
-        public MotherBoard(string manufacturerCompanyName, int cost, FormFactor formFactor, string socketName) : base(manufacturerCompanyName, cost) {
+        public MotherBoard(string deviceName, string manufacturerCompanyName, int cost, FormFactor formFactor, string socketName)
+            : base(manufacturerCompanyName, cost, deviceName)
+        {
             if (socketName == null) {
                 throw new ArgumentNullException("socketName");
             }
